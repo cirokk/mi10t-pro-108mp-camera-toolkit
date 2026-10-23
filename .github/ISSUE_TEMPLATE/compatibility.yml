@@ -1,0 +1,37 @@
+name: Device or firmware compatibility
+description: Share a sanitized capture result or integration issue.
+title: '[Compatibility] Device / ROM'
+body:
+  - type: markdown
+    attributes:
+      value: 'Do not upload raw logs, bugreports, serial numbers, account details or personal photos. JPEG dimensions alone do not establish sensor readout.'
+  - type: textarea
+    attributes:
+      label: Device and software
+      description: Model, Android/ROM version, host app or GCam mod version.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Capture configuration and result
+      description: Session, formats, usage, targets, decoded dimensions, color, latency, and errors. Describe any deviation from the tested profile.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Sensor evidence
+      options:
+        - Not inspected
+        - Output dimensions only
+        - Capture-time sensor mode inspected (describe sanitized evidence below)
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Sanitized evidence and reproduction steps
+  - type: checkboxes
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed personal data and did not attach raw phone logs or proprietary binaries.
+          required: true
